@@ -1,0 +1,23 @@
+# MySQL Veritabanı Dışa Aktarma (Komut Satırı)
+
+# Tüm veritabanını dışa aktarma
+mysqldump -u root -p shopping > shopping_backup.sql
+
+# Belirli bir tabloyu dışa aktarma
+mysqldump -u root -p shopping Product > product_backup.sql
+
+# Verileri içe aktarma (Komut Satırı)
+mysql -u root -p shopping < shopping_backup.sql
+
+# MySQL Workbench ile Dışa Aktarma
+# 1. MySQL Workbench'i açın
+# 2. Server > Data Export menüsünü seçin
+# 3. "shopping" veritabanını seçin
+# 4. Export Options'dan "Export to Self-Contained File" seçin
+# 5. "Start Export" düğmesine tıklayın
+
+# MySQL Workbench ile İçe Aktarma
+# 1. MySQL Workbench'i açın
+# 2. Server > Data Import menüsünü seçin
+# 3. "Import from Self-Contained File" seçin ve dosyayı belirtin
+# 4. "Start Import" düğmesine tıklayın 
